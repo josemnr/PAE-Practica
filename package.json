@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles": "sass src:assets/styles --no-source-map"
+    "styles": "gulp styles",
+    "scripts": "tsc",
+    "start": "npm run build && http-server ./dist",
+    "build": "gulp"
   },
   "keywords": [],
-  "author": "",
+  "author": "José Manuel Navarro",
   "license": "ISC",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "http-server": "^0.12.3",
     "sass": "^1.32.6",
     "typescript": "^4.1.4"
   }
