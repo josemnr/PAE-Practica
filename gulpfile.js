@@ -47,4 +47,4 @@ gulp.task('serve', function(){
     }))
 });
 
-gulp.task('default', gulp.parallel('watch:styles', 'watch:scripts', 'watch:html', 'serve'));
+gulp.task('default', gulp.series('watch:styles', 'watch:scripts', 'watch:html', 'serve'));
