@@ -9,22 +9,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
 </head>
 <body>
-    <h1 id="pageTitle">{{title}}</h1>
+    <h1 id="pageTitle">ITESO News App</h1>
     <section class="searcher">
-        <input class="searcher__input" type="search">
-        <button class="searcher__button">Go</button>
-        <span class="searcher__info">This project depends on <a class="searcher__info__link" href="https://newsapi.org/">News API</a>, a simple HTTP REST API for searching and retrieving live articles from all over the web</span>
+        <input id="searcher__input" class="searcher__input" type="text">
+        <button id="searcher__button" class="searcher__button">Go</button>
+        <span class="searcher__info">This project depends on <a class="searcher__info__link" href="https://newsapi.org/">News API</a>, a simple HTTP REST API for searching and retrieving live articles from all over the web.</span>
     </section>
-    <section class="box--container">
-        <div class="box">
-            <div class="box__image">
-                <img src=""/>
+    <section id="box--container" class="box--container">
+        {{#each news}}
+            <div class="box">
+                <div class="box__image--container">
+                    <img class="box__image" src="{{urlToImage}}"/>
+                </div>
+                <div class="box__content"><span class="box__content__source">{{source.name}}</span>
+                    <h3>{{title}}</h3>
+                    <p>{{description}}</p><a class="box__content__link" href="{{url}}" target="_blank">Read more</a>
+                </div>
             </div>
-            <div class="box__content">
-                <h3>{{newsTitle}}</h3>
-                <p>{{description}}</p><a class="box__link" href="{{url}}">Read more</a>
-            </div>
-        </div>
+        {{/each}}
     </section>
 </body>
 <script src="/assets/scripts/main.js"></script>
