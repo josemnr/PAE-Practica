@@ -23,8 +23,8 @@ searcherButton.onclick = function(){
         document.getElementById('box--container').innerHTML = template({
             news: data.articles,
         });
+        boxContainer.style.display = "flex";
     })
-    boxContainer.style.display = "flex";
 }
 
 
