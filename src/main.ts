@@ -2,9 +2,10 @@ declare var Handlebars: any;
 let today = new Date();
 let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
+const boxTemplate = document.getElementById('box--container').innerHTML;
+const boxContainer = document.getElementById('box--container');
 const searcherInput = <HTMLInputElement> document.getElementById('searcher__input');
 const searcherButton = document.getElementById('searcher__button');
-const boxTemplate = document.getElementById('box--container').innerHTML;
 const template = Handlebars.compile(boxTemplate);
 
 searcherButton.onclick = function(){
@@ -19,11 +20,11 @@ searcherButton.onclick = function(){
         return res.json();
     }).then((data)=>{
         console.log(data);
-        console.log(data.articles.title);
         document.getElementById('box--container').innerHTML = template({
             news: data.articles,
         });
     })
+    boxContainer.style.display = "flex";
 }
 
 
