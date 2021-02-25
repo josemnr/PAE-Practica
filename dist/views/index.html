@@ -10,11 +10,11 @@
 </head>
 <body>
     <h1 id="pageTitle">ITESO News App</h1>
-    <section class="searcher">
-        <input id="searcher__input" class="searcher__input" type="text">
+    <form class="searcher" action="/" method="GET">
+        <input name="topic" id="searcher__input" class="searcher__input" type="text">
         <button id="searcher__button" class="searcher__button">Go</button>
         <span class="searcher__info">This project depends on <a class="searcher__info__link" href="https://newsapi.org/">News API</a>, a simple HTTP REST API for searching and retrieving live articles from all over the web.</span>
-    </section>
+    </form>
     <section id="box--container" class="box--container" style="display: none;">
         {{#each news}}
             <div class="box">
@@ -29,5 +29,5 @@
         {{/each}}
     </section>
 </body>
-<script src="/assets/scripts/main.js"></script>
+<!-- <script src="/assets/scripts/main.js"></script> -->
 </html>

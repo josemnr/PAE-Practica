@@ -2,7 +2,7 @@
   "name": "practica2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles": "gulp styles",
@@ -14,11 +14,18 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
     "gulp-sass": "^4.1.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-webserver": "^0.9.1",
     "http-server": "^0.12.3",
     "sass": "^1.32.8",
     "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "newsapi": "^2.4.1",
+    "nodemon": "^2.0.7"
   }
 }
