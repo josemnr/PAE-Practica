@@ -13,18 +13,21 @@ exports.getNews = (req, res) => {
   let today = new Date();
   let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
   const news = new News(req.body.topic)
-  new.validateUserInput()
-  if(weather.errors.length)
-  newsapi.v2.everything({
-    q: topic,
-    from: date,
-    sortBy: 'relevancy',
-  }).then(response => {
-    console.log(response.articles);
-    res.render("index", {
-      news: response.articles
-    })
-  }).catch((error) => {
-    console.log(error)
-  });
+  news.validateUserInput()
+  if(news.errors.length){
+    console.log("No hay nada escrito")
+  }else{
+    newsapi.v2.everything({
+      q: topic,
+      from: date,
+      sortBy: 'relevancy',
+    }).then(response => {
+      console.log(response.articles);
+      res.render("index", {
+        news: response.articles
+      })
+    }).catch((error) => {
+      console.log(error)
+    });
+  }
 }
