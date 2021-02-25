@@ -9,4 +9,4 @@ News.prototype.validateUserInput = function() {
     }
 }
 
-module.exports = 
+module.exports = News
