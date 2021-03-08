@@ -4,6 +4,7 @@ const userController = require("../controllers/user")
 
 //Definición de rutas
 router.get("/", userController.getUsers);
-// router.post("/", userController.createUser);
+router.get("/create", userController.renderUserCreationPage);
+router.post("/create", userController.createUser);
 
 module.exports = router

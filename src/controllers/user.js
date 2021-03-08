@@ -4,10 +4,15 @@ exports.getUsers = (req, res) => {
     // res.end('Users endpoint');
     user.find({}, (err, results) => {
         console.log(results);
-        res.end('todo bien');
+        res.send(results);
     });
 }
 
-// exports.createUser = (req, res) => {
-//     res.end('Create User endpoint');
-// }
+exports.renderUserCreationPage = (req, res) => {
+    res.render("createUser");
+}
+
+exports.createUser = (req, res) => {
+    console.log(req.body);
+    user.insert(req.body);
+}

@@ -27,6 +27,15 @@ class Database {
         const collection = db.collection(this.collectionName);
         return collection.find(filters).toArray(cb);
     }
+
+    insert(object){
+        const collection = db.collection(this.collectionName);
+        return collection.insertOne(object).then((result) => {
+            console.log("Object inserted successfully");
+        }).catch(err => {
+            console.log("Failed to insert the object", err);
+        });
+    }
 }
 
 module.exports = Database;
