@@ -1,8 +1,7 @@
-const path = require('path');
 const NewsAPI = require('newsapi');
-const API_KEY = "2f2ef6f079f6471c9e88edf4e0d4d2e4";
-const newsapi = new NewsAPI(API_KEY);
-const News = require("../model/news");
+const {config} = require('../../config');
+const newsapi = new NewsAPI(config.api_key);
+const News = require("../models/news");
 
 exports.renderHomePage = (req, res) => {
   res.render("index")
