@@ -3,7 +3,6 @@ const express = require('express');
 const {newsRouter,userRouter} = require('./src/routes');
 const {config} = require('./config');
 const MongoClient = require('mongodb').MongoClient;
-// const { isIfStatement } = require('typescript');
 
 const app = express();
 

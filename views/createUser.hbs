@@ -8,10 +8,11 @@
 </head>
 <body>
     <h1>Sign up</h1>
-    <form class="searcher" action="/users/create" method="POST">
-        <input name="name" id="name__input" class="name__input" type="text">
-        <input name="email" id="email__input" class="email__input" type="text">
-        <input name="password" id="password__input" class="password__input" type="password">
+    <form class="searcher" action="/users/create" method="POST" enctype="multipart/form-data">
+        <input name="name" id="name__input" class="name__input" type="text"><br>
+        <input name="email" id="email__input" class="email__input" type="text"><br>
+        <input name="profilePic" id="profilePic__input" class="profilePic__input" type="file"><br>
+        <input name="password" id="password__input" class="password__input" type="password"><br>
         <button id="signUp__button" class="signUp__button">Sign Up</button>
     </form>
 </body>
