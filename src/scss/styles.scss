@@ -1,0 +1,167 @@
+// @import "/global.scss";
+//------------------------------------------Global------------------------------------------
+$primary-color: #333333;
+$light-color: #FFFFFF;
+$secondary-color:#8841da;
+$variation-color:#012179;
+$Font1:'Lato', sans-serif;
+$Font2:'Oswald', sans-serif;
+$base-font: 18px;
+
+@mixin button {
+    border-radius: 10px;
+    border:0.1em solid $secondary-color;
+    background-color: $light-color;
+    font-family: $Font1;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $secondary-color;
+    transition: all 0.2s;
+}
+
+@mixin fontFormat($font-size) {
+    font-size: $font-size;
+    line-height: $base-font + ($base-font * 0.10);
+
+}
+
+.box-shadow {
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+    ;
+}
+
+.Oswald {
+    font-family: $Font2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $Font1; 
+    color: $primary-color;
+    @include fontFormat($base-font);
+}
+
+h1,h2,h3 {
+    margin: 0;
+    @extend .Oswald 
+}
+
+.pageTitle {
+    margin: 2rem;
+}
+
+//------------------------------------------Searcher------------------------------------------
+.searcher {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 2rem;
+    &__input {
+        width: 100%;
+        height: 48%;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-radius: 5px;
+        font-size: 25px;
+        color: $variation-color;
+    }
+    &__button {
+        width: 100%;
+        height: 48%;
+        margin-top: 5px;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-size: 25px;
+        &:hover{
+            color: $light-color;
+            background-color: $secondary-color;
+        }
+        @include button;
+    }
+    &__info {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        font-family: $Font1; 
+        &__link {
+            text-decoration: none;
+            color: $secondary-color;
+            font-size: $base-font;
+            font-weight: 600;
+        }
+    }
+}
+//------------------------------------------Create User------------------------------------------
+.createUser{
+    &__name__input{
+        @extend .searcher__input;
+    }
+    &__email__input{
+        @extend .searcher__input;
+    }
+    &__password__input{
+        @extend .searcher__input;
+    }
+    &__profilePic__input{
+        @extend .searcher__input;
+    }
+    &__button{
+        @extend .searcher__button;
+    }
+    @extend .searcher;
+}
+
+//------------------------------------------Boxes------------------------------------------
+.box--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.box {
+    max-width: 430px;
+    margin: 1rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    &__image--container {
+        width: 100%;
+        height: 450px;
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+        margin: 0;  
+    }
+    &__content {
+        padding: 25px;
+        background-color: $light-color;
+        &__source {
+            color: $secondary-color;
+            @extend .Oswald;
+        }
+        &__link {
+            text-decoration: none;
+            color: $variation-color;
+            @extend .Oswald;
+        }
+    }
+    @extend .box-shadow;
+}
