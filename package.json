@@ -2,12 +2,12 @@
   "name": "practica_pae",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles": "gulp styles",
     "watch-styles": "gulp watch:styles",
-    "start": "node index.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "José Manuel Navarro",
@@ -17,11 +17,8 @@
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "mongodb": "^3.6.4",
-    "multer": "^1.4.2",
     "newsapi": "^2.4.1",
     "nodemon": "^2.0.7"
   }
