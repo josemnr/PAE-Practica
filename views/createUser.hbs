@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/styles.css">
     <title>Users</title>
 </head>
 <body>
-    <h1>Sign up</h1>
-    <form class="searcher" action="/users/create" method="POST" enctype="multipart/form-data">
-        <input name="name" id="name__input" class="name__input" type="text"><br>
-        <input name="email" id="email__input" class="email__input" type="text"><br>
-        <input name="profilePic" id="profilePic__input" class="profilePic__input" type="file"><br>
-        <input name="password" id="password__input" class="password__input" type="password"><br>
-        <button id="signUp__button" class="signUp__button">Sign Up</button>
+    <h1 class="pageTitle">Sign up</h1>
+    <form class="createUser" action="/users/create" method="POST" enctype="multipart/form-data">
+        <input name="name" id="createUser__name__input" class="createUser__name__input" type="text" placeholder="Nombre"><br>
+        <input name="email" id="createUser__email__input" class="createUser__email__input" type="text" placeholder="Email"><br>
+        <input name="profilePic" id="createUser__profilePic__input" class="createUser__profilePic__input" type="file"><br>
+        <input name="password" id="createUser__password__input" class="createUser__password__input" type="password" placeholder="Password"><br>
+        <button id="createUser__button" class="createUser__button">Sign Up</button>
     </form>
 </body>
 </html>

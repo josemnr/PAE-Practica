@@ -59,7 +59,7 @@ h1,h2,h3 {
     @extend .Oswald 
 }
 
-#pageTitle {
+.pageTitle {
     margin: 2rem;
 }
 
@@ -105,6 +105,26 @@ h1,h2,h3 {
         }
     }
 }
+//------------------------------------------Create User------------------------------------------
+.createUser{
+    &__name__input{
+        @extend .searcher__input;
+    }
+    &__email__input{
+        @extend .searcher__input;
+    }
+    &__password__input{
+        @extend .searcher__input;
+    }
+    &__profilePic__input{
+        @extend .searcher__input;
+    }
+    &__button{
+        @extend .searcher__button;
+    }
+    @extend .searcher;
+}
+
 //------------------------------------------Boxes------------------------------------------
 .box--container {
     display: flex;

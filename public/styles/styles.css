@@ -19,17 +19,17 @@ body {
 h1, h2, h3 {
   margin: 0; }
 
-#pageTitle {
+.pageTitle {
   margin: 2rem; }
 
-.searcher {
+.searcher, .createUser {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 120px;
   margin: auto;
   margin-bottom: 2rem; }
-  .searcher__input {
+  .searcher__input, .createUser__name__input, .createUser__email__input, .createUser__password__input, .createUser__profilePic__input {
     width: 100%;
     height: 48%;
     margin-left: 2rem;
@@ -37,7 +37,7 @@ h1, h2, h3 {
     border-radius: 5px;
     font-size: 25px;
     color: #012179; }
-  .searcher__button {
+  .searcher__button, .createUser__button {
     width: 100%;
     height: 48%;
     margin-top: 5px;
@@ -53,7 +53,7 @@ h1, h2, h3 {
     font-weight: 600;
     color: #8841da;
     transition: all 0.2s; }
-    .searcher__button:hover {
+    .searcher__button:hover, .createUser__button:hover {
       color: #FFFFFF;
       background-color: #8841da; }
   .searcher__info {
