@@ -13,13 +13,13 @@ let webserver = require('gulp-webserver');
 // }));
 
 gulp.task('styles', function(){
-    return gulp.src('src/*.scss')
+    return gulp.src('src/scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('public/styles'));
 });
 
 gulp.task('watch:styles', gulp.series('styles', function(done){
-    gulp.watch('src/*.scss', gulp.series('styles'));
+    gulp.watch('src/scss/*.scss', gulp.series('styles'));
     done();
 }));
 
